@@ -1,0 +1,74 @@
+body {
+    margin:0px;
+    padding:0px;
+    font-family: Montserrat;
+    color: var(--font-body)
+}
+
+#navbar {
+    grid-column: 1/-1;
+    padding:0;
+    margin:0;
+}
+#nav{
+    height:75px;
+    margin:0px;
+    display: flex;                                                       
+    align-items: center;
+    justify-content:space-around;
+    background-color: var(--primary-light);
+}
+
+
+#nav li{
+    padding: 0;
+    text-indent: 0;
+    list-style-type: none;
+    margin: auto;
+}
+
+.push{
+    margin-left: 900px; 
+}
+
+#nav:first-child {
+    margin-left:0px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--font-light);
+}
+
+.card {
+    margin-top: 20px;
+    margin-left: 10px;
+    padding:15px;
+    padding-bottom: 60px;
+    background-color: var(--secondary-light);
+    box-shadow: grey 0px 0px 3px;
+    border-radius: 3px;
+    line-height: 30px;
+}
+
+.card h2 {
+    font-family: "Monton"
+}
+
+.card button {
+    display: block;
+    margin: 15px auto 20px auto;   
+    border:none;
+    padding: 10px;
+    background-color: var(--font-body);
+    color: var(--font-light)
+}
+footer {
+    margin-top: auto;   
+    text-align: center;
+    padding: 15px;
+
+    color: var(--font-light);
+    background-color: var(--primary-dark)
+
+}

@@ -1,0 +1,10 @@
+:root {
+    --font-light: rgb(255, 247, 247);
+    --font-heading: #C30E00;
+    --font-body: rgb(85, 6, 0);
+    --primary-light: #56C6D5;
+    --primary-dark: #016978;
+    --secondary-light: #FFB006;
+    --secondary-dark: rgb(25, 46, 6);
+    --tertiary: rgb(224, 36, 124);
+}
