@@ -1,38 +1,12 @@
 {{partial "header" .}}
         <div id="splash"></div>
         <div id="content">
-        <div class="card">
-            <h3>About Me</h3>
-            Hello, my name is Michael, and currently I am a rising freshman at the University of Florida. My interests
-            are computer science, plants, and Chemistry. This year, I finished High School at James S Rickards High, in their IB Program.
-        </div>
-        <div class="card">
-            <div>
-                <h2>More Stuff</h2>
-            </div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, vel debitis nesciunt distinctio, doloremque odit
-            quasi, nostrum ipsam quam placeat in perferendis quo. Vero quia officia minus nesciunt exercitationem architecto
-            eligendi temporibus neque magnam fugiat dolorum quidem quas laboriosam facilis repudiandae similique ipsam, nostrum
-            saepe quasi nemo provident soluta. Aliquid.
-            <button>Read More</button></div>
-            
+       {{range first 4 (where .Pages "Section" "Posts")}}
             <div class="card">
-                    <div>
-                        <h2>About Me</h2>
-                    </div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, vel debitis nesciunt distinctio, doloremque odit
-                    quasi, nostrum ipsam quam placeat in perferendis quo. Vero quia officia minus nesciunt exercitationem architecto
-                    eligendi temporibus neque magnam fugiat dolorum quidem quas laboriosam facilis repudiandae similique ipsam, nostrum
-                    saepe quasi nemo provident soluta. Aliquid.
-                    <button>Read More</button></div>
-                    <div class="card">
-                            <div>
-                                <h2>About Me</h2>
-                            </div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, vel debitis nesciunt distinctio, doloremque odit
-                            quasi, nostrum ipsam quam placeat in perferendis quo. Vero quia officia minus nesciunt exercitationem architecto
-                            eligendi temporibus neque magnam fugiat dolorum quidem quas laboriosam facilis repudiandae similique ipsam, nostrum
-                            saepe quasi nemo provident soluta. Aliquid.
-                            <button>Read More</button></div>
+                <h1>{{.Title}}</h1>
+                <p>{{.Summary}}</p>
+                <a href="{{.URL}}"><button>Read More</button></a>
             </div>
-            
-        
+       {{end}}
     </div>
     {{partial "footer" .}}

@@ -1,7 +1,7 @@
 
      {{ partial "header" }}
     <link rel="stylesheet" href="/css/list.css">
-     {{.Content}}
+    <div class="content">     {{.Content}}
      {{ range .Pages }}
           <div class="card">
                <h2>
@@ -15,5 +15,4 @@
           </div>
      {{ end }}
      {{ partial "footer" . }}
-</body>
-</html>
+</div>

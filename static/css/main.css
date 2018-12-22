@@ -2,21 +2,23 @@ body {
     margin:0px;
     padding:0px;
     font-family: Montserrat;
-    color: var(--font-body)
+    color: var(--font-body);
+    height: 100%;
 }
 
 #navbar {
-    grid-column: 1/-1;
+    width: 100%;
     padding:0;
     margin:0;
 }
+
 #nav{
-    height:75px;
+    height:65px;
     margin:0px;
     display: flex;                                                       
     align-items: center;
     justify-content:space-around;
-    background-color: var(--primary-light);
+    background-color: var(--nav-background);
 }
 
 
@@ -40,13 +42,18 @@ body {
     color: var(--font-light);
 }
 
+.content {
+    margin: 0 auto 0 auto;
+    width: 80%
+}
+
 .card {
     margin-top: 20px;
     margin-left: 10px;
     padding:15px;
     padding-bottom: 60px;
-    background-color: var(--secondary-light);
-    box-shadow: grey 0px 0px 3px;
+    background-color: var(--list-color);
+    box-shadow: grey 0px 3px 5px;
     border-radius: 3px;
     line-height: 30px;
 }
@@ -64,11 +71,13 @@ body {
     color: var(--font-light)
 }
 footer {
-    margin-top: auto;   
+    margin-top: auto;  
+    margin-bottom: 0;
+
     text-align: center;
     padding: 15px;
 
-    color: var(--font-light);
-    background-color: var(--primary-dark)
+    color: var(--footer-color);
+    background-color: var(--footer-background)
 
 }

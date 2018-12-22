@@ -1,10 +1,13 @@
 :root {
-    --font-light: rgb(255, 247, 247);
-    --font-heading: #C30E00;
-    --font-body: rgb(85, 6, 0);
-    --primary-light: #56C6D5;
-    --primary-dark: #016978;
-    --secondary-light: #FFB006;
-    --secondary-dark: rgb(25, 46, 6);
+    --font-light:  	#ffffff;
+    --font-heading: rgb(255, 255, 255);
+    --font-body: rgb(31, 31, 31);
+    --footer-background: #baffec;
+    --footer-color: rgb(44, 44, 44);
+    --nav-background:  #5f96c9;
+    --list-color: rgb(255, 255, 255);
+    --secondary-dark: #3c3c3c;
     --tertiary: rgb(224, 36, 124);
 }
+
+/*https://www.color-hex.com/color-palette/68693*/
