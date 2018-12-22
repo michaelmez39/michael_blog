@@ -5,6 +5,7 @@ draft: false
 tags: ["school", "study", "ib"]
 categories: ["School"] 
 ---
+
 # It's that time of year...
 Hello, I have to start studying for my IB exams that are coming up this May. I have to take six IB exams.
 
