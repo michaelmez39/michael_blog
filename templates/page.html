@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+{% block title %}
+    {{ page.title }}
+{% endblock title %} 
+
+{% block head %} 
+    {{ super() }}
+{% endblock head %} 
+
+{% block content %} 
+    {{page.content | safe}}
+    <div class="article-crawler">
+        <div>
+            {% if page.earlier %}
+                Previous: <a href="{{ page.earlier.permalink }}">{{page.earlier.title}}</a>
+            {% endif%}
+        </div>
+        
+        <div>
+            {% if page.later %}
+                Next: <a href="{{ page.later.permalink }}">{{page.later.title}}</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content%} 
+
+{% block footer %} 
+    {{super()}} 
+{% endblock footer %}

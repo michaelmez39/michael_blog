@@ -1,0 +1,118 @@
+$text-dark: darken(#00334e, 30%);
+$text-light: #f9f7f7;
+$link-focus: #dbe2ef;
+$link-underline: #eaf5ff;
+
+$content-background: #f9f7f7;
+$footer-background: #112d4e;
+$sidebar-background: #1c4b82;
+$default-background: #dbe2ef;
+
+$shadow: #c5c5c5;
+$body-font: "Spectral", serif;
+$header-font: "Comfortaa", sans;
+html
+    height: 120%;
+body
+    margin: 0;
+    height: 100%;
+
+a
+    color: inherit;
+    text-decoration: None;
+    transition: 0.5s;
+a:hover
+    color: $link-focus;
+
+h1, h2, h3, h4, h5
+    font-family: $header-font
+
+#wrapper
+    display: grid; 
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 2fr 100px;
+
+    font-size: 1.2em;
+    font-family: $body-font;
+    color: $text-dark;
+    background-color: $default-background;
+    min-height: 100%;
+
+#sidebar
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    padding: 30px;
+
+    background-color: $sidebar-background;
+    color: $text-light;
+    box-shadow: inset 0 0 14px black;
+
+    font-family: $header-font;
+    font-size: 0.8em;    
+    img
+        width: 150px;
+    
+    a
+        padding: 15px;
+
+#content
+    padding: 30px;
+    padding-top: 10px;
+    margin: 0px;
+
+    display: flex;
+    flex-direction: column;
+    background-color: $content-background; 
+    box-shadow: 5px 5px 17px $shadow;
+
+    font-size: 1.2em;
+    
+#footer
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 40px;
+    // Debug color
+    color: $text-light;
+    background-color: $footer-background;
+
+
+
+
+.listed
+    margin-left: 20px;
+    margin-right: 20px;
+    > div
+        padding: 10px;
+        margin-top: 10px;
+        background-color: $default-background;
+        border-radius: 2px;
+        box-shadow: 4px 4px 8px $shadow;
+    a
+        background-image: linear-gradient(to right, $link-underline 50%, transparent 50%);
+        background-position: 0 1.04em;
+        background-repeat: repeat-x;
+        background-size: 7px 5px;
+
+    a:hover
+        color: inherit;
+
+.pop
+    font-size: 1.6em;
+
+.social-bar
+    position: static;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    img
+        width: 24px;
+        height: auto;
+        margin: 3px;
+
+.article-crawler
+    margin-top: auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 0.8em;

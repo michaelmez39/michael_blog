@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %}{{ section.title }}{% endblock title %} {% block head %} {{ super() }} {% endblock head %} {% block content %}
+<h2>{{section.title}}</h2>
+<p>{{section.content | safe}}</p>
+<div class="listed">
+    {% for page in section.pages %}
+    <div>
+        <a href="/{{ page.path | safe }}">{{page.title}}</a>
+        <p>{{ page.description }}</p>
+        <p>Word Count: {{ page.word_count }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content%} {% block footer %} {{super()}} {% endblock footer %}
