@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     
+    
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Spectral" rel="stylesheet">
+    <title>
+    Paasio
+ | Michael Mezzina</title>
+    
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="sidebar">
+            <div class="pop">
+                <p>Michael's <br> Blog</p>
+            </div>
+            <a href="/">Home</a> <a href="/exercism/">Exercism</a>
+        </div>
+        <div id="content">
+            <div class="social-bar">
+                <a href=""><img src="/facebook-7-48.png" alt="facebook"></a>
+                <a href=""><img src="/github.png" alt="github"></a>
+                <a href=""><img src="/instagram-6-48.png" alt="instagram"></a>
+            </div>
+             
+    <h1 id="paasio">Paasio</h1>
+<h2 id="sample-page">Sample Page</h2>
+<p>With some <em>stuff</em></p>
+<pre style="background-color:#fdf6e3;">
+<span style="color:#657b83;">
+</span><span style="color:#859900;">pub </span><span style="color:#268bd2;">struct </span><span style="color:#657b83;">ReadStats&lt;R&gt;{
+</span><span style="color:#657b83;">    </span><span style="color:#268bd2;">reader</span><span style="color:#657b83;">: R,
+</span><span style="color:#657b83;">    </span><span style="color:#268bd2;">reads</span><span style="color:#657b83;">: </span><span style="color:#268bd2;">usize</span><span style="color:#657b83;">,
+</span><span style="color:#657b83;">    </span><span style="color:#268bd2;">through</span><span style="color:#657b83;">: </span><span style="color:#268bd2;">usize
+</span><span style="color:#657b83;">}
+</span><span style="color:#657b83;">
+</span><span style="color:#268bd2;">impl</span><span style="color:#657b83;">&lt;R: Read&gt; ReadStats&lt;R&gt; {
+</span><span style="color:#657b83;">    </span><span style="color:#859900;">pub </span><span style="color:#268bd2;">fn </span><span style="color:#b58900;">new</span><span style="color:#657b83;">(</span><span style="color:#268bd2;">wrapped</span><span style="color:#657b83;">: R) -&gt; ReadStats&lt;R&gt; {
+</span><span style="color:#657b83;">        </span><span style="color:#657b83;">ReadStats {
+</span><span style="color:#657b83;">            </span><span style="color:#657b83;">reader: wrapped,
+</span><span style="color:#657b83;">            </span><span style="color:#657b83;">reads: </span><span style="color:#6c71c4;">0</span><span style="color:#657b83;">,
+</span><span style="color:#657b83;">            </span><span style="color:#657b83;">through: </span><span style="color:#6c71c4;">0
+</span><span style="color:#657b83;">        </span><span style="color:#657b83;">}
+</span><span style="color:#657b83;">    </span><span style="color:#657b83;">}
+</span><span style="color:#657b83;">
+</span><span style="color:#657b83;">    </span><span style="color:#859900;">pub </span><span style="color:#268bd2;">fn </span><span style="color:#b58900;">get_ref</span><span style="color:#657b83;">(</span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">self</span><span style="color:#657b83;">) -&gt; </span><span style="color:#859900;">&amp;</span><span style="color:#657b83;">R {
+</span><span style="color:#657b83;">        </span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">self</span><span style="color:#657b83;">.reader
+</span><span style="color:#657b83;">    </span><span style="color:#657b83;">}
+</span><span style="color:#657b83;">
+</span><span style="color:#657b83;">    </span><span style="color:#859900;">pub </span><span style="color:#268bd2;">fn </span><span style="color:#b58900;">bytes_through</span><span style="color:#657b83;">(</span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">self</span><span style="color:#657b83;">) -&gt; </span><span style="color:#268bd2;">usize </span><span style="color:#657b83;">{
+</span><span style="color:#657b83;">        </span><span style="color:#268bd2;">self</span><span style="color:#657b83;">.through
+</span><span style="color:#657b83;">    </span><span style="color:#657b83;">}
+</span><span style="color:#657b83;">
+</span><span style="color:#657b83;">    </span><span style="color:#859900;">pub </span><span style="color:#268bd2;">fn </span><span style="color:#b58900;">reads</span><span style="color:#657b83;">(</span><span style="color:#859900;">&amp;</span><span style="color:#268bd2;">self</span><span style="color:#657b83;">) -&gt; </span><span style="color:#268bd2;">usize </span><span style="color:#657b83;">{
+</span><span style="color:#657b83;">        </span><span style="color:#268bd2;">self</span><span style="color:#657b83;">.reads
+</span><span style="color:#657b83;">    </span><span style="color:#657b83;">}
+</span><span style="color:#657b83;">}
+</span><span style="color:#657b83;">
+</span><span style="color:#268bd2;">impl</span><span style="color:#657b83;">&lt;R: Read&gt; Read </span><span style="color:#859900;">for </span><span style="color:#657b83;">ReadStats&lt;R&gt; {
+</span><span style="color:#657b83;">    </span><span style="color:#268bd2;">fn </span><span style="color:#b58900;">read</span><span style="color:#657b83;">(</span><span style="color:#859900;">&amp;mut </span><span style="color:#268bd2;">self</span><span style="color:#657b83;">, </span><span style="color:#268bd2;">buf</span><span style="color:#657b83;">: </span><span style="color:#859900;">&amp;mut</span><span style="color:#657b83;"> [</span><span style="color:#268bd2;">u8</span><span style="color:#657b83;">]) -&gt; Result&lt;</span><span style="color:#268bd2;">usize</span><span style="color:#657b83;">&gt; {
+</span><span style="color:#657b83;">        </span><span style="color:#268bd2;">self</span><span style="color:#657b83;">.reads </span><span style="color:#859900;">+= </span><span style="color:#6c71c4;">1</span><span style="color:#657b83;">;
+</span><span style="color:#657b83;">        </span><span style="color:#859900;">match </span><span style="color:#268bd2;">self</span><span style="color:#657b83;">.reader.</span><span style="color:#859900;">read</span><span style="color:#657b83;">(buf) {
+</span><span style="color:#657b83;">            </span><span style="color:#859900;">Ok</span><span style="color:#657b83;">(n) </span><span style="color:#859900;">=&gt; </span><span style="color:#657b83;">{
+</span><span style="color:#657b83;">                </span><span style="color:#268bd2;">self</span><span style="color:#657b83;">.through </span><span style="color:#859900;">+=</span><span style="color:#657b83;"> n;
+</span><span style="color:#657b83;">                </span><span style="color:#859900;">Ok</span><span style="color:#657b83;">(n)
+</span><span style="color:#657b83;">            </span><span style="color:#657b83;">},
+</span><span style="color:#657b83;">            </span><span style="color:#859900;">Err</span><span style="color:#657b83;">(e) </span><span style="color:#859900;">=&gt; </span><span style="color:#657b83;">{
+</span><span style="color:#657b83;">                </span><span style="color:#859900;">Err</span><span style="color:#657b83;">(e)
+</span><span style="color:#657b83;">            </span><span style="color:#657b83;">}
+</span><span style="color:#657b83;">        </span><span style="color:#657b83;">}
+</span><span style="color:#657b83;">    </span><span style="color:#657b83;">}
+</span><span style="color:#657b83;">}
+</span><span style="color:#657b83;">
+</span></pre>
+    <div class="article-crawler">
+        <div>
+            
+                Previous: <a href="https:&#x2F;&#x2F;michaelmezzina.com&#x2F;exercism&#x2F;scrabble-score&#x2F;">Scrabble Score</a>
+            
+        </div>
+        
+        <div>
+            
+                Next: <a href="https:&#x2F;&#x2F;michaelmezzina.com&#x2F;exercism&#x2F;space-age&#x2F;">Space Age</a>
+            
+        </div>
+    </div>
+
+        </div>
+        <div id="footer">
+             
+    
+            <div>
+                &copy; Copyright 2008 by <a href="/">Michael Mezzina</a>.
+            </div>
+             
+
+        </div>
+    </div>
+
+</body>
+
+</html>
